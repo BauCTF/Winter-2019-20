@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ffsdojs</title>
+    <style>
+      body {
+        width: 100vh;
+        height: 100vw;
+      }
+      #inp {
+        width: 300px;
+      }
+    </style>
+    <script>
+      const m = function(x) {
+        // remove this line to see the magic -> aofemef0eaflmaa9
+        const s = String;
+        const c = String.fromCharCode;
+        const d = /ūŗŦǤŁŜŗƮńůſǫŉŨēǀŚİŖǺņŤŅǢ/;
+
+        const h = function(f) {
+          p = typeof p === "undefined" ? 1 : p;
+          q = typeof q === "undefined" ? 2 : q;
+          if (typeof f !== "undefined") {
+            let a = 0;
+            for (let c in s(m)) {
+              s(m).charAt(c) == "0" ? a++ : null;
+              s(m).charAt(c) == "(" ? a++ : null;
+            }
+            return [
+              (Math.floor(p / a) % 255) + 250,
+              ((p + a) % 255) + 250,
+              ((q + a) % 255) + 250,
+              ((q - a) % 255) + 250
+            ];
+          }
+          return null;
+        };
+
+        const e = function(k) {
+          while (x.length % 2) a++;
+          let r = "";
+          for (let i = 0; i < x.length; i++) {
+            r += c(x.charCodeAt(i) ^ k[i % 4]);
+          }
+          return r === s(d).substring(1, s(d).length - 1);
+        };
+
+        console.log(eval("h()"));
+        setTimeout(() => {
+          if (typeof x === "undefined") return;
+          if (
+            /^CTF{([0-9a-zA-Z_@!?-]+)}$/.test(x) &&
+            !eval('eval("m()")') &&
+            e(h("!"))
+          ) {
+            return alert("Correct");
+          }
+          return alert("Wrong!");
+        }, 1000000);
+
+        var t = setInterval(() => {
+          if (typeof x !== "undefined" && p + q < 4509) {
+            q++;
+            p += 2;
+          } else {
+            clearInterval(t);
+          }
+        }, 100);
+      };
+    </script>
+  </head>
+  <body>
+    <h1>CTF Flag Checker</h1>
+    <input id="inp" type="text" placeholder="Enter The Flag :" />
+    <button onclick="m(inp.value)">check</button>
+    <p>* wait for the response, it might take 17 mins</p>
+    <p>* refresh the page after every try</p>
+  </body>
+</html>
