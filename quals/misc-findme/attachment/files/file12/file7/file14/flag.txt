@@ -1,0 +1,1 @@
+CTF{this1sN0tTheFlag}
