@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.head {
+  width: 100vw;
+  height: 80vh;
+  background-image: url("./assets/cobble.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.head > p {
+  height: 15vh;
+  color: white;
+}
+
+.inside {
+  width: 100vw;
+  height: 50px;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(8, 18, 36);
+  color: white;
+}
+
+.bottom > img {
+  width: 100px;
+}
+
+#pass {
+  width: 160px;
+  height: 17px;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+}
